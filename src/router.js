@@ -17,11 +17,19 @@ export default new Router({
       component: ()=>import('./views/MapState.vue')
     },
     {
+      path: '/mapactions',
+      name: 'mapactions',
+      component: ()=>import('./views/MapActions.vue')
+    },
+    {
+      path: '/mapmutations',
+      name: 'mapmutations',
+      component: ()=>import('./views/MapMutations.vue')
+    },
+    {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+    
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     }
   ]

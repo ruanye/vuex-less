@@ -84,6 +84,28 @@ import {mapState} from 'vuex'
 import {mapGetters} from 'vuex'
 放在computed属性里面 ...mapGetters(可以是对象可以是数组)
 对象的时候只是起到改名的作用 
+3. mapActions  映射actions 到this的methods对象上 会把actions的方法作为this上的方法 
+
+methods里面定义的方法怎么调用 mapActions 拿回来的方法就可以怎么调用 
+```
+methods:{
+ ...mapActions(['ActionsAdd'])
+我们可以当做 等价于下面的写法  
+    ActionsAdd(){
+
+    }
+}
+```
+import {mapActions} from 'vuex'
+用的时候放到methods 
+4. mapMatutions 把mutations的方法映射到this的methods上面 可以通过this[mutations上定义的函数] 来调用对应的方法 
+import {mapMutations} from 'vuex'
+用的时候放在methods上面  
+5. 辅助函数总结
+跟数据相关的都放computed里面 mapState mapGetters 
+跟方法相关的都放 methods里面 
+mapActions mapMutations  
+ 
 
 
 
