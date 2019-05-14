@@ -74,40 +74,63 @@ actions和matutions传参问题
 2) 多个参数 传递对象 比如传2个 2,3 需要写成 {a:2,b:3}
 
 #### 辅助函数 
-1. mapState  map映射 映射state到this的data上面  
+1. mapState 
+```
+...mapState(['username'])
+this.user = this.$store.state.username 
+``` 
+
 组件使用
 import {mapState} from 'vuex'
 放在computed属性里面 ...mapState(可以是对象可以是数组)
 对象的时候需要用箭头函数返回响应的state值 
 
-2. mapGettes 映射getters的属性到this的data上面 
+
+2. mapGetters 
+```
+...mapGetters(['number'])
+this.number = this.$store.getters.number
+```
+组件使用
 import {mapGetters} from 'vuex'
 放在computed属性里面 ...mapGetters(可以是对象可以是数组)
 对象的时候只是起到改名的作用 
-3. mapActions  映射actions 到this的methods对象上 会把actions的方法作为this上的方法 
+ 
 
-methods里面定义的方法怎么调用 mapActions 拿回来的方法就可以怎么调用 
+3. mapActions  
 ```
-methods:{
  ...mapActions(['ActionsAdd'])
-我们可以当做 等价于下面的写法  
-    ActionsAdd(){
 
-    }
-}
+ this.ActionsAdd = this.$store.dispatch('ActionsAdd')
+
 ```
+组件使用
 import {mapActions} from 'vuex'
 用的时候放到methods 
-4. mapMatutions 把mutations的方法映射到this的methods上面 可以通过this[mutations上定义的函数] 来调用对应的方法 
+4. mapMatutions
+```` 
+...mapMutations('addcount')
+
+this.addcount = this.$store.commit('addcout')
+```
+组件使用
 import {mapMutations} from 'vuex'
+
 用的时候放在methods上面  
 5. 辅助函数总结
 跟数据相关的都放computed里面 mapState mapGetters 
 跟方法相关的都放 methods里面 
 mapActions mapMutations  
  
+##vuex拆分 
+所有需要引入的都在index.js 引入  
+流程 1导出(export default)-->2引入(import .. form ...)-->3在store对象上挂{actions:actions} 简化成{actions}
 
+使用常量替代 Mutation 事件类型
+import * as Types from './mutations-types'  
+把导出的所有的属性放在Types对象上面  
 
+作业:把之前写过都放放在拆分的里面去  
 
 
 

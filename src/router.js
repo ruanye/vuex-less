@@ -17,6 +17,11 @@ export default new Router({
       component: ()=>import('./views/MapState.vue')
     },
     {
+      path: '/vuexsplit',
+      name: 'vuexsplit',
+      component: ()=>import('./views/VuexSplit.vue')
+    },
+    {
       path: '/mapactions',
       name: 'mapactions',
       component: ()=>import('./views/MapActions.vue')
@@ -25,6 +30,11 @@ export default new Router({
       path: '/mapmutations',
       name: 'mapmutations',
       component: ()=>import('./views/MapMutations.vue')
+    },
+    {
+      path: '/getuser',
+      name: 'getuser',
+      component: ()=>import('./views/GetUser.vue')
     },
     {
       path: '/about',

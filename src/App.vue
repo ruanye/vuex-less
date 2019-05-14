@@ -5,7 +5,9 @@
       <router-link to="/about">About</router-link>|
       <router-link to="/mapstate">mapstate</router-link>|
       <router-link to="/mapactions">mapactions</router-link>|
-      <router-link to="/mapmutations">mapmutations</router-link>
+      <router-link to="/mapmutations">mapmutations</router-link>|
+      <router-link to="/getuser">getuser</router-link>
+      <router-link to="/vuexsplit">vuex拆分</router-link>
     </div>
     <router-view/>
   </div>

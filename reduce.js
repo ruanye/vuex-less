@@ -67,3 +67,4 @@ console.log(flattern1(JSON.parse(JSON.stringify(data))))
 //     return pre.concat(cut);
 // }
 // console.log(data.reduce(re, []));
+

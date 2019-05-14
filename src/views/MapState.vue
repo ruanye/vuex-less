@@ -13,6 +13,7 @@ import { constants } from 'fs';
 export default {
   computed: {
        ...mapState(['count','username']),
+        // this.count = this.$store.state.count  
        ...mapGetters({
          abc:'Num'
        }),
