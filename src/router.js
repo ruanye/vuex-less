@@ -17,6 +17,16 @@ export default new Router({
       component: ()=>import('./views/MapState.vue')
     },
     {
+      path: '/list',
+      name: 'list',
+      component: ()=>import('./views/List.vue')
+    },
+    {
+      path: '/car',
+      name: 'car',
+      component: ()=>import('./views/Car.vue')
+    },
+    {
       path: '/vuexsplit',
       name: 'vuexsplit',
       component: ()=>import('./views/VuexSplit.vue')

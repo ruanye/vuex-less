@@ -132,6 +132,22 @@ import * as Types from './mutations-types'
 
 作业:把之前写过都放放在拆分的里面去  
 
+##moudle 子模块 
+moudles:{user}
+state 取值 
+this.$store.state.user.name
+...mapState
+如果文件里只使用vuex的模块 用 
+'vuex' 
+import { createNamespacedHelpers } from 'vuex' 
+const {mapState,mapGetters,mapActions} = createNamespacedHelpers('user')
+
+如果也有全局的用 任何情况都可以使用下面这种方式
+...mapState([])
+...mapState('模块名',['state里面的变量'])
+
+
+
 
 
 

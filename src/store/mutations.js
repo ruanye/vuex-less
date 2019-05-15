@@ -1,9 +1,5 @@
-import * as Types from './mutations-types'
-// Types  ={SET_USER:"SET_USER"}
-//[Types.SET_USER]()
-const mutations ={
-   [Types.SET_USER](state,payload){
-     state.username = payload 
-   }
+export default {
+	mAddcar(state,payload){
+      state.carlist = [...state.carlist,payload]
+	}
 }
-export default mutations
