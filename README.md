@@ -146,6 +146,21 @@ const {mapState,mapGetters,mapActions} = createNamespacedHelpers('user')
 ...mapState([])
 ...mapState('模块名',['state里面的变量'])
 
+##插件
+plugins:[ ] 插件的集合 
+官方提供的logger插件 只做调试用  
+vuex表单处理 https://vuex.vuejs.org/zh/guide/forms.html
+
+package.json  放脚本 放依赖文件 
+//项目安排  2-5 人做一个  负责人 统计 程冬雪  博客类  easy-mock  每个人做一个小程序项目 
+// element  https://element.eleme.cn/2.0/#/zh-CN/component/quickstart
+--element-admin 
+
+vue.ant.design  https://vue.ant.design/components/input-cn/
+
+iview-admin  http://v1.iviewui.com/docs/guide/install
+登录  注册  学生作品展示  上传作品  管理员 登录  管理学生 成绩管理  
+
 
 
 

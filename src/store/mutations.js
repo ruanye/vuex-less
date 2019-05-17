@@ -1,7 +1,16 @@
 import Vue from 'vue'
 import * as Types from './mutations-types'
+import { stat } from 'fs';
 export default {
-	[Types.ADD_CAR](state,payload){
+	  //改变全选
+   [Types.CHANGE_CHECKALL](state,payload){
+		 //每一项的选中值等于全选的选中值 
+     state.carlist.forEach(item => {
+			  item.sele = payload
+		 });
+		 state.carlist=[...state.carlist]
+	 },
+	 [Types.ADD_CAR](state,payload){
       // 判断购物车里面有没有这个商品 没有的话数量等于1 有的话在原有的数量上面加1 
 	let good = state.carlist.find(item=>item.id==payload.id)
 	if(good){
